@@ -33,7 +33,7 @@ bitcoin@backend1:/$ bitcoin-cli -rpcwallet=miner1 getblockheader "5c3513c33fb0ea
 ## Evidence references
 
 TODO: Link screenshots or describe the attached evidence.
-![img_9.png](img_9.png)
+![img_9.png](evidence/img_9.png)
 
 ## Explanation
 

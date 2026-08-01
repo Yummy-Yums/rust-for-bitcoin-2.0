@@ -18,9 +18,21 @@ pub fn get_block_header<C: RpcClient>(
     let result = client.call(None, "getblockheader", &[block_hash.to_string()])?;
 
     let decoded = parse_cli_value(&result)?;
-    println!(" === {:?}", decoded);
 
-    Ok(serde_json::from_value::<BlockHeaderEvidence>(decoded)?)
+    Ok(BlockHeaderEvidence {
+        hash: required_string(&decoded, "hash")?,
+        height: required_u64(&decoded, "height")?,
+        previous_block_hash: decoded
+            .get("previousblockhash")
+            .and_then(Value::as_str)
+            .map(ToOwned::to_owned),
+        merkle_root: required_string(&decoded, "merkleroot")?,
+        nonce: required_u64(&decoded, "nonce")?,
+        difficulty: required_f64(&decoded, "difficulty")?,
+        bits: required_string(&decoded, "bits")?,
+        confirmations: decoded["confirmations"].as_i64().unwrap_or_default(),
+        chainwork: required_string(&decoded, "chainwork")?,
+    })
 }
 
 /// Mine an exact number of additional blocks and return their hashes.

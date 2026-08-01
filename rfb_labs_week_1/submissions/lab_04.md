@@ -33,7 +33,7 @@ bitcoin@backend1:/$ bitcoin-cli -rpcwallet=miner listunspent
 ## Evidence references
 
 TODO: Link screenshots or describe the attached evidence.
-![img_4.png](img_4.png)
+![img_4.png](evidence/img_4.png)
 
 ## Explanation
 

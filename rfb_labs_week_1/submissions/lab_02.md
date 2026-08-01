@@ -70,8 +70,8 @@ bitcoin@backend1:/$ bitcoin-cli -rpcwallet=receiver getwalletinfo
 ```
 
 ## Evidence references
-![img_1.png](img_1.png)
-![img_2.png](img_2.png)
+![img_1.png](evidence/img_1.png)
+![img_2.png](evidence/img_2.png)
 
 ## Explanation
 

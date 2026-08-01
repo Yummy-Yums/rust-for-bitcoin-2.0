@@ -59,8 +59,8 @@ bitcoin@backend1:/$ bitcoin-cli -rpcwallet=receiver1 gettransaction "31320512472
 ## Evidence references
 
 TODO: Link screenshots or describe the attached evidence.
-![img_5.png](img_5.png)
-![img_6.png](img_6.png)
+![img_5.png](evidence/img_5.png)
+![img_6.png](evidence/img_6.png)
 
 ## Explanation
 

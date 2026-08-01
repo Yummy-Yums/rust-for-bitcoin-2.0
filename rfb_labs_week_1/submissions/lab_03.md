@@ -186,7 +186,7 @@ bitcoin@backend1:/$ bitcoin-cli -rpcwallet=miner1 getbalances
 
 ## Evidence references
 
-![img_3.png](img_3.png)
+![img_3.png](evidence/img_3.png)
 
 ## Explanation
 

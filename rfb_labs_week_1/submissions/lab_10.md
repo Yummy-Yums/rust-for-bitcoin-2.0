@@ -96,7 +96,7 @@ bitcoin@backend1:/$ bitcoin-cli getpeerinfo
 ## Evidence references
 
 TODO: Link screenshots or describe the attached evidence.
-![img_10.png](img_10.png)
+![img_10.png](evidence/img_10.png)
 
 ## Explanation
 

@@ -92,7 +92,7 @@ bitcoin@backend1:/$ bitcoin-cli getrawtransaction "31320512472671286073dcff374a9
 ## Evidence references
 
 TODO: Link screenshots or describe the attached evidence.
-![img_7.png](img_7.png)
+![img_7.png](evidence/img_7.png)
 
 ## Explanation
 

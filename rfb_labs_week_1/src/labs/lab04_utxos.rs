@@ -17,11 +17,22 @@ pub fn list_unspent<C: RpcClient>(client: &C, wallet_name: &str) -> LabResult<Ve
                 .as_array()
                 .unwrap()
                 .iter()
-                .map(|x| serde_json::from_value::<Utxo>(x.clone()).unwrap())
-                .collect::<Vec<Utxo>>();
+                .map(|entry| Utxo {
+                    txid: entry["txid"].as_str().unwrap_or_default().to_owned(),
+                    vout: entry["vout"].as_u64().unwrap_or_default() as u32,
+                    address: entry["address"].as_str().map(ToOwned::to_owned),
+                    script_pub_key: entry["scriptPubKey"]
+                        .as_str()
+                        .unwrap_or_default()
+                        .to_owned(),
+                    amount: entry["amount"].as_f64().unwrap_or_default(),
+                    confirmations: entry["confirmations"].as_u64().unwrap_or_default(),
+                    spendable: entry["spendable"].as_bool().unwrap_or_default(),
+                })
+                .collect();
 
             Ok(utxos)
-        }
+        },
         Err(err) => Err(err),
     }
 }

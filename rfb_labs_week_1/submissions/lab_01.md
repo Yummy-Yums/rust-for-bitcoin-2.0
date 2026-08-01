@@ -35,7 +35,7 @@ bitcoin@backend1:/$ bitcoin-cli -rpcwallet=receiver getbestblockhash
 ```
 
 ## Evidence references
-![img.png](img.png)
+![img.png](evidence/img.png)
 
 ## Explanation
 - Polar creates the network and opens terminals for you to run `bitcoin-cli` commands.
