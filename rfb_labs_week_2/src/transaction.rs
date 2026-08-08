@@ -78,14 +78,9 @@ impl Transaction {
     }
 
     pub fn total_input_value(&self) -> u64 {
-        // TODO(Part 3): match both InputKind variants and sum their values.
-        // todo!("calculate the total input value")
         self.inputs.iter().fold(0, |acc, input| match input {
-            InputKind::Regular {
-                value,
-                ..
-            } => acc + value,
-            InputKind::Coinbase { .. } => acc,
+            InputKind::Regular { value, .. } => acc + value,
+            InputKind::Coinbase { reward, .. } => acc + reward,
         })
     }
 
